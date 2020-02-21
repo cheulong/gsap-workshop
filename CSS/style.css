@@ -1,0 +1,48 @@
+main {
+  width: 80%;
+  margin: auto;
+  margin-bottom: 50px;
+}
+
+.title {
+  text-align: center;
+}
+.showcase {
+  display: flex;
+  flex-direction: row;
+}
+
+.wrapper {
+  width: 50%;
+  height: auto;
+}
+.swirl {
+  width: 80%;
+  height: auto;
+}
+.content {
+  width: 50%;
+}
+a {
+  display: inline-block;
+  background: #b100f2;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1em;
+}
+
+ul {
+  text-align: center;
+  margin: auto;
+  width: 200px;
+}
+
+li {
+  width: 200px;
+  text-align: center;
+  background: greenyellow;
+  padding: 10px;
+  border: 1px solid gray;
+}

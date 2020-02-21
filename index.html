@@ -1,0 +1,43 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./CSS/style.css" />
+    <title>GSAP WORDSHOP</title>
+  </head>
+  <body>
+    <main>
+      <h1 class="title">Welcom to Greensock 101</h1>
+      <div class="showcase">
+        <div class="content">
+          <h1 class="anim1">
+            <span>Bridging the gap</span> <span>between dream</span>
+            <span>and reality</span>
+          </h1>
+          <p class="anim1">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio at
+            ipsa alias modi natus excepturi?
+          </p>
+          <a href="#" class="anim1" id="cta">Start Dreaming</a>
+        </div>
+        <div class="wrapper">
+          <img
+            class="swirl"
+            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2621168/swirl.png"
+            alt="Swirl Graphic"
+          />
+        </div>
+      </div>
+    </main>
+    <ul>
+      <li>Child 1</li>
+      <li>Child 2</li>
+      <li>Child 3</li>
+    </ul>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.1.1/gsap.min.js"></script>
+
+    <script>
+      gsap.from('div', { opacity: 0, duration: 1, y: -50 });
+    </script>
+  </body>
+</html>
