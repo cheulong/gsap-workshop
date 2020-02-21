@@ -30,22 +30,44 @@
 
 // timeline
 var tl = gsap.timeline();
+var tl2 = gsap.timeline();
 var firstItem = document.getElementsByClassName('list')[0].firstElementChild,
   secondItem = document.getElementsByClassName('list')[0].children[1],
-  lastItem = document.getElementsByClassName('list')[0].lastElementChild;
+  lastItem = document.getElementsByClassName('list')[0].lastElementChild,
+  line = document.getElementById('line');
 
 tl.from('.title', { opacity: 0, y: -50 })
   .from('.subTitle', { opacity: 0, x: -50 })
   .from('.anim1', { opacity: 0, x: -50 })
-  .from('.wrapper', { opacity: 0, x: 50 })
+  .from('.wrapper', { opacity: 0, x: 50 });
+
+  tl2.from(line, {  x: '-100%' }, '+=0.5')
   .from(firstItem, { opacity: 0, y: -50 }, '+=0.5')
   .from(secondItem, { opacity: 0, y: -50 }, '+=0.5')
   .from(lastItem, { opacity: 0, y: -50 }, '+=0.5');
-tl.pause();
+// tl.pause();
 
 document.getElementById('onPlay').addEventListener('click', function() {
   tl.play();
 });
 document.getElementById('onPause').addEventListener('click', function() {
-  tl.pause();
+  tl.restart();
 });
+
+
+
+var controller = new ScrollMagic.Controller();
+
+
+var scene = new ScrollMagic.Scene({
+  triggerElement: '#cta',
+  triggerHook: 0.2
+})
+  .addIndicators({
+    colorTrigger: "black",
+    colorStart: "black",
+    colorEnd: "black",
+    indent: 5
+  })
+  .setTween(tl2)
+  .addTo(controller);
