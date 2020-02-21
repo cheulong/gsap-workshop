@@ -13,15 +13,14 @@ main {
 }
 
 .wrapper {
-  width: 50%;
-  height: auto;
+  flex: 0.5;
 }
 .swirl {
-  width: 80%;
   height: auto;
+  width: 130%;
 }
 .content {
-  width: 50%;
+  flex: 0.5;
 }
 a {
   display: inline-block;
